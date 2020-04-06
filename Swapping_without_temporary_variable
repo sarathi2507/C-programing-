@@ -1,0 +1,12 @@
+#include<studio.h>
+void main() 
+{
+   int a,b;
+   a=5;
+   b=10;
+   printf("Value of a and b before swap a=%d b=%d",a,b);
+   a=a+b;
+   b=a-b;
+   a=a-b;
+   printf("\nValue of a and b after swap a=%d b=%d",a,b);
+}
