@@ -1,0 +1,37 @@
+#include<stdio.h>
+void main()
+{
+	int arr[3][3];
+	int i,j,k,l,m,n;
+	int sum=0;
+	int (*ponter)[3];
+	ponter=arr;
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			printf("Enter the value of arr[%d][%d]=",i,j);
+			scanf("%d",(ponter+i)+j);
+		}
+	
+	}
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			printf("%d\t",**(ponter+i)+j);
+		}
+		printf("\n");
+	}
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(i==j)
+			{
+				sum+=**(ponter+i)+j;
+			}
+		}
+	}
+	printf("The sum of the diagonals is %d",sum);
+}
