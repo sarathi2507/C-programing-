@@ -1,0 +1,23 @@
+#include<stdio.h>
+struct a
+{
+	int empno;
+	char empname[10];
+	char department_name[10];
+	int salary;	
+}a[20];
+void printstruct(int no);
+void  main()
+{
+	int b;
+	printf("Enter the empno. to be printed");
+	scanf("%d",&b);
+	printstruct(b);
+}
+void printstruct(int no)
+{
+	printf("Empno %d",a[no].empno);
+	printf("Empname %9s",a[no].empname);
+	printf("Department_name %9s",a[no].department_name);
+	printf("Salary %d",a[no].salary);
+}
